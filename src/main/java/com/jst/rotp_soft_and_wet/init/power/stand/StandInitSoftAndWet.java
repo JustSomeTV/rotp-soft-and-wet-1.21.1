@@ -6,6 +6,7 @@ import com.github.standobyte.jojo.powersystem.ability.controls.InputKey;
 import com.github.standobyte.jojo.powersystem.ability.controls.InputMethod;
 import com.github.standobyte.jojo.powersystem.standpower.StandStats;
 import com.github.standobyte.jojo.powersystem.standpower.StandUnlockableSkill;
+import com.jst.rotp_soft_and_wet.init.power.AddonStandAbilities;
 import com.jst.rotp_soft_and_wet.powersystem.standpower.type.SoftAndWetType;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.ApiStatus;
@@ -27,6 +28,8 @@ public class StandInitSoftAndWet {
 
                         .addHumanoidStandStuff()
 
+                        //.addAbility("bubble_launch", AddonStandAbilities.BUBBLE_LAUNCH)
+
                         .addAbility("punch", ModStandAbilities.PUNCH)
                         .addAbility("punch2", ModStandAbilities.PUNCH)
                         .addAbility("punch3", ModStandAbilities.PUNCH)
@@ -44,6 +47,8 @@ public class StandInitSoftAndWet {
                         .bind("barrage", InputMethod.HOLD, InputKey.LMB)
                         .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
                         .bind("heavy_charged", InputMethod.HOLD, InputKey.RMB)
+                        .bind("bubble_launch", InputMethod.HOLD, InputKey.LMB.withModifier(InputKey.Modifier.CONTROL))
+
 
                         .finalizeControlScheme()
 
@@ -53,6 +58,7 @@ public class StandInitSoftAndWet {
                         .bind("barrage", InputMethod.HOLD, InputKey.LMB)
                         .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
                         .bind("heavy_charged", InputMethod.HOLD, InputKey.RMB)
+                        .bind("bubble_launch", InputMethod.HOLD, InputKey.C)
 
                         .finalizeControlScheme()
 
@@ -60,6 +66,7 @@ public class StandInitSoftAndWet {
                         .addSkill(StandUnlockableSkill.startingAbility("barrage"))
                         .addSkill(StandUnlockableSkill.startingAbility("heavy_punch"))
                         .addSkill(StandUnlockableSkill.startingAbility("heavy_charged").prerequisiteSkill("heavy_punch"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_launch", 125).prerequisiteSkill("punch"))
 
                         .addHumanoidStandSkills()
 

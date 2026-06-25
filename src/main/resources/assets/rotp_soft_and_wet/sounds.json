@@ -1,0 +1,6 @@
+{
+  "bubble_launch":{
+    "subtitle": "rotp_soft_and_wet.subtitle.soft_and_wet_bubbles",
+    "sounds": [ "rotp_soft_and_wet:user/soft_and_wet_bubbles" ]
+  }
+}
