@@ -17,17 +17,17 @@ public class SoftAndWetBubbleLaunch extends EntityActionAbility {
         super(abilityType, abilityId);
     }
 
-//    @Override
-//    public HeldInput onKeyPress(Level level, LivingEntity user, FriendlyByteBuf extraClientInput, InputMethod inputMethod, float clickHoldResolveTime, BufferingState bufferingState) {
-//        if (!level.isClientSide()) {
-//            if(user instanceof Player player){
-//                RipplesOfThePastSoftAndWet.getLogger().info("Ability Press");
-//            }
-//        } else {
-//            return super.onKeyPress(level, user, extraClientInput,
-//                    inputMethod, clickHoldResolveTime, bufferingState);
-//        }
-//
-//        return  null;
-//    }
+    @Override
+    public HeldInput onKeyPress(Level level, LivingEntity user, FriendlyByteBuf extraClientInput, InputMethod inputMethod, float clickHoldResolveTime, BufferingState bufferingState) {
+        if (!level.isClientSide()) {
+            if(user instanceof Player player){
+                RipplesOfThePastSoftAndWet.getLogger().info("Ability Press");
+            }
+        } else {
+            return super.onKeyPress(level, user, extraClientInput,
+                    inputMethod, clickHoldResolveTime, bufferingState);
+        }
+
+        return  null;
+    }
 }

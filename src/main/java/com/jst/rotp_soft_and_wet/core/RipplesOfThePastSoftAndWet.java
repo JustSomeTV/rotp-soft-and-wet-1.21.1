@@ -4,6 +4,7 @@ import com.jst.rotp_soft_and_wet.entity.ModEntities;
 import com.jst.rotp_soft_and_wet.entity.client.SoftAndWetBubbleRenderer;
 import com.jst.rotp_soft_and_wet.init.AddonSoundEvents;
 import com.jst.rotp_soft_and_wet.init.power.AddonPlayerPowers;
+import com.jst.rotp_soft_and_wet.init.power.AddonStandAbilities;
 import com.jst.rotp_soft_and_wet.init.power.stand.AddonStands;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -33,6 +34,7 @@ public class RipplesOfThePastSoftAndWet {
         AddonPlayerPowers.PLAYER_POWERS.register(modEventBus);
         AddonStands.STANDS.register(modEventBus);
         AddonSoundEvents.SOUNDS.register(modEventBus);
+        AddonStandAbilities.load();
     }
 
     @SubscribeEvent

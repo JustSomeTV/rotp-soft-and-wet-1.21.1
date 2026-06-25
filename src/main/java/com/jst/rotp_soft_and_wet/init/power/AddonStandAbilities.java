@@ -11,7 +11,4 @@ public class AddonStandAbilities {
 
     public static final DeferredHolder<AbilityType<?>,AbilityType<SoftAndWetBubbleLaunch>> BUBBLE_LAUNCH = ABILITY_TYPES.register(
             "bubble_launch", key -> new AbilityType<>(key, SoftAndWetBubbleLaunch::new));
-
-//    public static final DeferredHolder<AbilityType<?>, AbilityType<ShotAbility>> EMP_SHOT = ABILITY_TYPES.register(
-//            "emp_shot", key -> new AbilityType<>(key, ShotAbility::new));
 }

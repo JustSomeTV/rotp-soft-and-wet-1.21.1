@@ -1,5 +1,8 @@
 package com.jst.rotp_soft_and_wet.init.power.stand;
 
+import static com.github.standobyte.jojo.init.power.ModStands.SWITCH_SPECIAL;
+import static com.github.standobyte.jojo.init.power.ModStands.USE_SPECIAL;
+
 import com.github.standobyte.jojo.init.power.ModStandAbilities;
 import com.github.standobyte.jojo.powersystem.MovesetBuilder;
 import com.github.standobyte.jojo.powersystem.ability.controls.InputKey;
@@ -28,7 +31,7 @@ public class StandInitSoftAndWet {
 
                         .addHumanoidStandStuff()
 
-                        //.addAbility("bubble_launch", AddonStandAbilities.BUBBLE_LAUNCH)
+                        .addAbility("bubble_launch", AddonStandAbilities.BUBBLE_LAUNCH)
 
                         .addAbility("punch", ModStandAbilities.PUNCH)
                         .addAbility("punch2", ModStandAbilities.PUNCH)
@@ -42,12 +45,14 @@ public class StandInitSoftAndWet {
                         .addAbility("heavy_charged", ModStandAbilities.HEAVY_CHARGED)
 
                         .makeControlScheme("hotbar")
+                        .makeHotbar(0, USE_SPECIAL, SWITCH_SPECIAL)
 
                         .bind("punch", InputMethod.CLICK, InputKey.LMB)
                         .bind("barrage", InputMethod.HOLD, InputKey.LMB)
                         .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
                         .bind("heavy_charged", InputMethod.HOLD, InputKey.RMB)
-                        .bind("bubble_launch", InputMethod.HOLD, InputKey.LMB.withModifier(InputKey.Modifier.CONTROL))
+
+                        .addToHotbar("bubble_launch",0, InputMethod.HOLD)
 
 
                         .finalizeControlScheme()
