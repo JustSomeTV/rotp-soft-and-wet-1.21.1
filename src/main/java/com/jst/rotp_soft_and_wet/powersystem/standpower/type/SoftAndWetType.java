@@ -23,6 +23,7 @@ import com.github.standobyte.jojo.powersystem.standpower.StandStats;
 import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Consumer;
+import java.util.jar.Attributes;
 
 public class SoftAndWetType extends EntityStandType {
     public SoftAndWetType(StandStats stats, MovesetBuilder moveset, ResourceLocation id) {

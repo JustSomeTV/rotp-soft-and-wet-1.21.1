@@ -31,7 +31,11 @@ public class StandInitSoftAndWet {
 
                         .addHumanoidStandStuff()
 
-                        .addAbility("bubble_launch", AddonStandAbilities.BUBBLE_LAUNCH)
+                        .addAbility("bubble_barrage", AddonStandAbilities.BUBBLE_BARRAGE)
+                        .addAbility("bubble_shoot", AddonStandAbilities.BUBBLE_SHOOT)
+                        .addAbility("bubble_blinding", AddonStandAbilities.BUBBLE_BLINDING)
+                        .addAbility("bubble_friction", AddonStandAbilities.BUBBLE_FRICTION)
+                        .addAbility("bubble_moisture", AddonStandAbilities.BUBBLE_MOISTURE)
 
                         .addAbility("punch", ModStandAbilities.PUNCH)
                         .addAbility("punch2", ModStandAbilities.PUNCH)
@@ -51,8 +55,12 @@ public class StandInitSoftAndWet {
                         .bind("barrage", InputMethod.HOLD, InputKey.LMB)
                         .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
                         .bind("heavy_charged", InputMethod.HOLD, InputKey.RMB)
+                        .bind("bubble_shoot", InputMethod.CLICK, InputKey.RMB.withModifier(InputKey.Modifier.CONTROL))
 
-                        .addToHotbar("bubble_launch",0, InputMethod.HOLD)
+                        .addToHotbar("bubble_barrage",0, InputMethod.HOLD)
+                        .addToHotbar("bubble_blinding",0, InputMethod.HOLD)
+                        .addToHotbar("bubble_moisture",0, InputMethod.HOLD)
+                        .addToHotbar("bubble_friction",0, InputMethod.HOLD)
 
 
                         .finalizeControlScheme()
@@ -63,7 +71,8 @@ public class StandInitSoftAndWet {
                         .bind("barrage", InputMethod.HOLD, InputKey.LMB)
                         .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
                         .bind("heavy_charged", InputMethod.HOLD, InputKey.RMB)
-                        .bind("bubble_launch", InputMethod.HOLD, InputKey.C)
+                        .bind("bubble_shoot", InputMethod.HOLD, InputKey.C)
+                        .bind("bubble_barrage", InputMethod.HOLD, InputKey.C.withModifier(InputKey.Modifier.CONTROL))
 
                         .finalizeControlScheme()
 
@@ -71,7 +80,13 @@ public class StandInitSoftAndWet {
                         .addSkill(StandUnlockableSkill.startingAbility("barrage"))
                         .addSkill(StandUnlockableSkill.startingAbility("heavy_punch"))
                         .addSkill(StandUnlockableSkill.startingAbility("heavy_charged").prerequisiteSkill("heavy_punch"))
-                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_launch", 125).prerequisiteSkill("punch"))
+                        .addSkill(StandUnlockableSkill.startingAbility("bubble_shoot"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_launch", 125).prerequisiteSkill("bubble_shoot"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_blinding", 225).prerequisiteSkill("bubble_barrage"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_moisture", 225).prerequisiteSkill("bubble_barrage"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_friction", 225).prerequisiteSkill("bubble_barrage"))
+
+
 
                         .addHumanoidStandSkills()
 
