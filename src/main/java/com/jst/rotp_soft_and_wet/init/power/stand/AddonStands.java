@@ -19,6 +19,5 @@ public class AddonStands {
 
     static{
         ModStands.PLAYER_CAN_GET_FROM_ARROW.add(SOFT_AND_WET);
-        ModStands.PLAYER_CAN_GET_FROM_ARROW.add(PAISLEY_PARK);
     }
 }

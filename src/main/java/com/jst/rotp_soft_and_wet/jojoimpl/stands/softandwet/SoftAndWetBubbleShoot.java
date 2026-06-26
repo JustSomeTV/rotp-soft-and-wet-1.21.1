@@ -35,7 +35,7 @@ public class SoftAndWetBubbleShoot extends EntityActionAbility {
                     look.x + level.random.nextGaussian() * 0.08,
                     look.y + level.random.nextGaussian() * 0.08,
                     look.z + level.random.nextGaussian() * 0.08,
-                    1.0F,
+                    0.5F,
                     0.0F);
             level.addFreshEntity(bubbleProjectile);
         }

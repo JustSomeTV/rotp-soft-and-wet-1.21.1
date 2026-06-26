@@ -2,5 +2,38 @@
   "stand.rotp_soft_and_wet.soft_and_wet": "Soft & Wet",
   "stand.rotp_soft_and_wet.soft_and_wet.desc": "Soft & Wet, The Stand Of Josuke Higashikata Of Part 8 (JoJolion)",
   "rotp_soft_and_wet.subtitle.soft_and_wet_bubbles":  "Soft And Wet Bubble Burst",
-  "stand.rotp_soft_and_wet.paisley_park": "Paisley Park"
+
+  "jojo_ripples.skill.bubble_shoot":  "Bubble Bullet",
+  "jojo_ripples.ability.bubble_shoot":  "Bubble Bullet",
+  "jojo_ripples.skill.bubble_shoot.desc": "Shoot A Singular Bubble Out To Hurt A Target, Just A Simple Long Range Ability That Damages",
+  "jojo_ripples.skill.bubble_shoot.controls":  "CTRL + \uEAFE",
+
+  "jojo_ripples.skill.bubble_barrage":  "Bubble Barrage",
+  "jojo_ripples.ability.bubble_barrage":  "Bubble Barrage",
+  "jojo_ripples.skill.bubble_barrage.desc":  "Shoots Out A Bubble ''Barrage'', Basically Just Like Bubble Bullet But Like A Shotgun",
+  "jojo_ripples.skill.bubble_barrage.controls":  "X + Ability Selected",
+
+  "jojo_ripples.skill.bubble_blinding":  "Plunder Bubble: Eyesight",
+  "jojo_ripples.ability.bubble_blinding":  "Plunder Bubble: Eyesight",
+  "jojo_ripples.skill.bubble_blinding.desc":  "Similar To The Bubble Barrage, But These Bullets Blind Your Target/s (Temporarily)",
+  "jojo_ripples.skill.bubble_blinding.controls":  "X + Ability Selected",
+
+  "jojo_ripples.skill.bubble_moisture":  "Plunder Bubble: Moisture",
+  "jojo_ripples.ability.bubble_moisture":  "Plunder Bubble: Moisture",
+  "jojo_ripples.skill.bubble_moisture.desc":  "Similar To The Bubble Bullet, But These Bullets Weaken Your Target (Temporarily)",
+  "jojo_ripples.skill.bubble_moisture.controls":  "X + Ability Selected",
+
+  "jojo_ripples.skill.bubble_friction":  "Plunder Bubble: Friction",
+  "jojo_ripples.ability.bubble_friction":  "Plunder Bubble: Friction",
+  "jojo_ripples.skill.bubble_friction.desc":  "Similar To The Bubble Bullet, But These Bullets Immobilize Your Target (Temporarily)",
+  "jojo_ripples.skill.bubble_friction.controls":  "X + Ability Selected",
+
+  "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_head": "Josuke Higashikata 8's Hat",
+  "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_chest": "Josuke Higashikata 8's Shirt",
+  "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_legs": "Josuke Higashikata 8's Pants",
+  "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_feet": "Josuke Higashikata 8's Shoes",
+
+  "stand.rotp_soft_and_wet.paisley_park": "Paisley Park",
+
+  "power.rotp_soft_and_wet.spin": "Spin Technique"
 }

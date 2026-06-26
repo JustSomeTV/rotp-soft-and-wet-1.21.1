@@ -1,0 +1,47 @@
+{
+  "character": "rotp_soft_and_wet_clothes:josuke_p8",
+  "story_part": "jojo_ripples:p8",
+  "pieces": {
+
+    "head": {
+      "asset_id": "rotp_soft_and_wet_clothes:josuke_higashikata_p8_manga",
+      "texture_id": "rotp_soft_and_wet_clothes:josuke_higashikata_p8_manga",
+      "item_model": "rotp_soft_and_wet_clothes.josuke_higashikata_p8_manga_head",
+      "item_name": {
+        "translate": "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_head"
+      },
+      "equip_sound": "item.armor.equip_generic"
+    },
+
+    "chest": {
+      "asset_id": "rotp_soft_and_wet_clothes:josuke_higashikata_p8_manga",
+      "texture_id": "rotp_soft_and_wet_clothes:josuke_higashikata_p8_manga",
+      "item_model": "rotp_soft_and_wet_clothes.josuke_higashikata_p8_manga_chest",
+      "item_name": {
+        "translate": "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_chest"
+      },
+      "equip_sound": "item.armor.equip_generic"
+    },
+
+    "legs": {
+      "asset_id": "rotp_soft_and_wet_clothes:josuke_higashikata_p8_manga",
+      "texture_id": "rotp_soft_and_wet_clothes:josuke_higashikata_p8_manga",
+      "item_model": "rotp_soft_and_wet_clothes.josuke_higashikata_p8_manga_legs",
+      "item_name": {
+        "translate": "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_legs"
+      },
+      "equip_sound": "item.armor.equip_generic"
+    },
+
+    "feet": {
+      "asset_id": "rotp_soft_and_wet_clothes:josuke_higashikata_p8_manga",
+      "texture_id": "rotp_soft_and_wet_clothes:josuke_higashikata_p8_manga",
+      "item_model": "rotp_soft_and_wet_clothes.josuke_higashikata_p8_manga_feet",
+      "item_name": {
+        "translate": "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_feet"
+      },
+      "equip_sound": "item.armor.equip_generic"
+    }
+
+  }
+}

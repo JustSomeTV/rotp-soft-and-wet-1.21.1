@@ -28,18 +28,16 @@ public class SoftAndWetBubbleFriction extends EntityActionAbility {
     public HeldInput onKeyPress(Level level, LivingEntity user, FriendlyByteBuf extraClientInput, InputMethod inputMethod, float clickHoldResolveTime, BufferingState bufferingState) {
         if (!level.isClientSide) if (user instanceof Player player) {
             //Launch Projectile
-            for(int i = 0; i < 10; ++i) {
-                SoftAndWetBubbleEntity bubbleProjectile = new SoftAndWetBubbleEntity(level, player);
-                bubbleProjectile.setBubbleType(SoftAndWetBubbleEntity.BubbleType.FRICTION);
-                Vec3 look = player.getLookAngle();
-                bubbleProjectile.shoot(
-                        look.x + level.random.nextGaussian() * 0.08,
-                        look.y + level.random.nextGaussian() * 0.08,
-                        look.z + level.random.nextGaussian() * 0.08,
-                        1.0F,
-                        0.0F);
-                level.addFreshEntity(bubbleProjectile);
-            }
+            SoftAndWetBubbleEntity bubbleProjectile = new SoftAndWetBubbleEntity(level, player);
+            bubbleProjectile.setBubbleType(SoftAndWetBubbleEntity.BubbleType.FRICTION);
+            Vec3 look = player.getLookAngle();
+            bubbleProjectile.shoot(
+                    look.x,
+                    look.y,
+                    look.z,
+                    0.5F,
+                    0.0F);
+            level.addFreshEntity(bubbleProjectile);
         }
         return  null;
     }

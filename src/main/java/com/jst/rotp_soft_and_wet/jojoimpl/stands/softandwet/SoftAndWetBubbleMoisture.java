@@ -32,10 +32,10 @@ public class SoftAndWetBubbleMoisture extends EntityActionAbility {
             bubbleProjectile.setBubbleType(SoftAndWetBubbleEntity.BubbleType.MOISTURE);
             Vec3 look = player.getLookAngle();
             bubbleProjectile.shoot(
-                    look.x + level.random.nextGaussian() * 0.08,
-                    look.y + level.random.nextGaussian() * 0.08,
-                    look.z + level.random.nextGaussian() * 0.08,
-                    1.0F,
+                    look.x,
+                    look.y,
+                    look.z,
+                    0.75F,
                     0.0F);
             level.addFreshEntity(bubbleProjectile);
         }

@@ -43,10 +43,6 @@ public class StandInitSoftAndWet {
                         .addAbility("punch4", ModStandAbilities.PUNCH)
                         .addAbility("barrage", ModStandAbilities.BARRAGE)
                         .addAbility("heavy_punch", ModStandAbilities.HEAVY_PUNCH)
-                        .addAbility("finisher", ModStandAbilities.HEAVY_PUNCH, punch -> {
-                            punch.initIsFinisher();
-                        })
-                        .addAbility("heavy_charged", ModStandAbilities.HEAVY_CHARGED)
 
                         .makeControlScheme("hotbar")
                         .makeHotbar(0, USE_SPECIAL, SWITCH_SPECIAL)
@@ -54,7 +50,6 @@ public class StandInitSoftAndWet {
                         .bind("punch", InputMethod.CLICK, InputKey.LMB)
                         .bind("barrage", InputMethod.HOLD, InputKey.LMB)
                         .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
-                        .bind("heavy_charged", InputMethod.HOLD, InputKey.RMB)
                         .bind("bubble_shoot", InputMethod.CLICK, InputKey.RMB.withModifier(InputKey.Modifier.CONTROL))
 
                         .addToHotbar("bubble_barrage",0, InputMethod.HOLD)
@@ -70,7 +65,6 @@ public class StandInitSoftAndWet {
                         .bind("punch", InputMethod.CLICK, InputKey.LMB)
                         .bind("barrage", InputMethod.HOLD, InputKey.LMB)
                         .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
-                        .bind("heavy_charged", InputMethod.HOLD, InputKey.RMB)
                         .bind("bubble_shoot", InputMethod.HOLD, InputKey.C)
                         .bind("bubble_barrage", InputMethod.HOLD, InputKey.C.withModifier(InputKey.Modifier.CONTROL))
 
@@ -81,10 +75,10 @@ public class StandInitSoftAndWet {
                         .addSkill(StandUnlockableSkill.startingAbility("heavy_punch"))
                         .addSkill(StandUnlockableSkill.startingAbility("heavy_charged").prerequisiteSkill("heavy_punch"))
                         .addSkill(StandUnlockableSkill.startingAbility("bubble_shoot"))
-                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_launch", 125).prerequisiteSkill("bubble_shoot"))
-                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_blinding", 225).prerequisiteSkill("bubble_barrage"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_barrage", 175).prerequisiteSkill("bubble_shoot"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_blinding", 350).prerequisiteSkill("bubble_friction"))
                         .addSkill(StandUnlockableSkill.unlockableAbility("bubble_moisture", 225).prerequisiteSkill("bubble_barrage"))
-                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_friction", 225).prerequisiteSkill("bubble_barrage"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("bubble_friction", 275).prerequisiteSkill("bubble_moisture"))
 
 
 

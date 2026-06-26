@@ -84,7 +84,7 @@ public class SoftAndWetBubbleEntity extends ModdedProjectileEntity {
                 break;
             case FRICTION:
                 target.addEffect(
-                        new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1));
+                        new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 255));
                 break;
             case MOISTURE:
                 target.addEffect(
