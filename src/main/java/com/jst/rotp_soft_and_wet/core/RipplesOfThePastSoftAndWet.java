@@ -3,6 +3,8 @@ package com.jst.rotp_soft_and_wet.core;
 import com.jst.rotp_soft_and_wet.entity.ModEntities;
 import com.jst.rotp_soft_and_wet.entity.client.SoftAndWetBubbleRenderer;
 import com.jst.rotp_soft_and_wet.init.AddonSoundEvents;
+import com.jst.rotp_soft_and_wet.init.ModCreativeModeTabs;
+import com.jst.rotp_soft_and_wet.init.ModItems;
 import com.jst.rotp_soft_and_wet.init.power.AddonPlayerPowers;
 import com.jst.rotp_soft_and_wet.init.power.AddonStandAbilities;
 import com.jst.rotp_soft_and_wet.init.power.stand.AddonStands;
@@ -30,6 +32,8 @@ public class RipplesOfThePastSoftAndWet {
         modEventBus.register(this);
 
         ModEntities.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         AddonPlayerPowers.PLAYER_POWERS.register(modEventBus);
         AddonStands.STANDS.register(modEventBus);

@@ -1,4 +1,6 @@
 {
+  "creativetab.soft_and_wet.soft_and_wet_tab": "ROTP: Soft And Wet Resources",
+
   "stand.rotp_soft_and_wet.soft_and_wet": "Soft & Wet",
   "stand.rotp_soft_and_wet.soft_and_wet.desc": "Soft & Wet, The Stand Of Josuke Higashikata Of Part 8 (JoJolion)",
   "rotp_soft_and_wet.subtitle.soft_and_wet_bubbles":  "Soft And Wet Bubble Burst",
@@ -33,7 +35,14 @@
   "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_legs": "Josuke Higashikata 8's Pants",
   "item.rotp_soft_and_wet.josuke_higashikata_p8_manga_feet": "Josuke Higashikata 8's Shoes",
 
+  "item.rotp_soft_and_wet.josefumi_kujo_p8_manga_chest": "Josefumi Kujo's Shirt",
+  "item.rotp_soft_and_wet.josefumi_kujo_p8_manga_legs": "Josefumi Kujo's Pants",
+  "item.rotp_soft_and_wet.josefumi_kujo_p8_manga_feet": "Josefumi Kujo's Shoes",
+
   "stand.rotp_soft_and_wet.paisley_park": "Paisley Park",
 
-  "power.rotp_soft_and_wet.spin": "Spin Technique"
+  "power.rotp_soft_and_wet.spin": "Spin Technique",
+  "item.rotp_soft_and_wet.steel_ball": "Steel Ball",
+
+  "item.rotp_soft_and_wet.rokakaka": "Rokakaka Fruit"
 }

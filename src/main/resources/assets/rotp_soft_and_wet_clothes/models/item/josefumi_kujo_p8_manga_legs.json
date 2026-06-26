@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "rotp_soft_and_wet_clothes:item/josefumi_kujo_p8_manga_legs"
+  }
+}
