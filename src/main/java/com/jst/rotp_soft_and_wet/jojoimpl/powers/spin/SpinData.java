@@ -2,8 +2,7 @@ package com.jst.rotp_soft_and_wet.jojoimpl.powers.spin;
 
 import com.github.standobyte.jojo.powersystem.Power;
 import com.github.standobyte.jojo.powersystem.playerpower.PlayerPowerData;
-import com.github.standobyte.jojo.powersystem.playerpower.PlayerPowerType;
-import com.jst.rotp_soft_and_wet.jojoimpl.powers.spin.data.SpinDataEnergy;
+import com.jst.rotp_soft_and_wet.jojoimpl.powers.spin.data.SpinDataSkills;
 import com.jst.rotp_soft_and_wet.jojoimpl.powers.spin.data.SpinDataStats;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -11,9 +10,8 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.LivingEntity;
 
 public class SpinData extends PlayerPowerData {
-    public SpinDataEnergy energy = new SpinDataEnergy(this);
     public SpinDataStats stats = new SpinDataStats(this);
-    //public SpinDataSkills skills = new SpinDataSkills(this);
+    public SpinDataSkills skills = new SpinDataSkills(this);
 
     public SpinData() {
         super(SpinPowerType.SPIN.get());

@@ -34,14 +34,14 @@
 							}
 						},
 						{
-							"origin": [-4, 16, -2],
-							"size": [8, 8, 4],
+							"origin": [-4, 15, -2],
+							"size": [8, 9, 4],
 							"inflate": 0.34,
 							"uv": {
-								"north": {"uv": [20, 36], "uv_size": [8, 8]},
-								"east": {"uv": [16, 36], "uv_size": [4, 8]},
-								"south": {"uv": [32, 36], "uv_size": [8, 8]},
-								"west": {"uv": [28, 36], "uv_size": [4, 8]},
+								"north": {"uv": [20, 36], "uv_size": [8, 9]},
+								"east": {"uv": [16, 36], "uv_size": [4, 9]},
+								"south": {"uv": [32, 36], "uv_size": [8, 9]},
+								"west": {"uv": [28, 36], "uv_size": [4, 9]},
 								"up": {"uv": [20, 32], "uv_size": [8, 4]},
 								"down": {"uv": [36, 36], "uv_size": [8, -4]}
 							}
@@ -159,12 +159,12 @@
 				},
 				{
 					"name": "right_leg",
-					"pivot": [-2, 12, 0]
+					"pivot": [-1.9, 12, 0]
 				},
 				{
 					"name": "slot2_rLeg",
 					"parent": "right_leg",
-					"pivot": [-2, 12, 0],
+					"pivot": [-1.9, 12, 0],
 					"cubes": [
 						{
 							"origin": [-3.9, 3, -2],
@@ -204,7 +204,7 @@
 				},
 				{
 					"name": "left_leg",
-					"pivot": [2, 12, 0]
+					"pivot": [1.9, 12, 0]
 				},
 				{
 					"name": "slot3_lLeg",

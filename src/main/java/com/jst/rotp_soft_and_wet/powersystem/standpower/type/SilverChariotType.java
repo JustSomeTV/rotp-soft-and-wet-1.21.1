@@ -23,8 +23,8 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Consumer;
 
-public class SoftAndWetType extends EntityStandType {
-    public SoftAndWetType(StandStats stats, MovesetBuilder moveset, ResourceLocation id) {
+public class SilverChariotType extends EntityStandType {
+    public SilverChariotType(StandStats stats, MovesetBuilder moveset, ResourceLocation id) {
         super(stats, moveset, id);
     }
 

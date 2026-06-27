@@ -44,5 +44,7 @@
   "power.rotp_soft_and_wet.spin": "Spin Technique",
   "item.rotp_soft_and_wet.steel_ball": "Steel Ball",
 
-  "item.rotp_soft_and_wet.rokakaka": "Rokakaka Fruit"
+  "item.rotp_soft_and_wet.rokakaka": "Rokakaka Fruit",
+  "tooltip.rotp_soft_and_wet.rokakaka.shift_down": "When Eaten Stand Is Removed",
+  "item.rotp_soft_and_wet.rokakaka_seeds": "Rokakaka Seeds"
 }

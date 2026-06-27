@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "rotp_soft_and_wet:block/rokakaka_crop_stage2"
+  }
+}

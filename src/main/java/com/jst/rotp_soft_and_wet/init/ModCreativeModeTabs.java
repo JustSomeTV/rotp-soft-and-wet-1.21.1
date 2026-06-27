@@ -30,6 +30,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.soft_and_wet.soft_and_wet_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ROKAKAKA.get());
+                        output.accept(ModItems.ROKAKAKA_SEEDS.get());
                         output.accept(ModItems.STEEL_BALL.get());
                         output.accept(standDisc(AddonStands.SOFT_AND_WET));
                         output.accept(standDisc(AddonStands.PAISLEY_PARK));
