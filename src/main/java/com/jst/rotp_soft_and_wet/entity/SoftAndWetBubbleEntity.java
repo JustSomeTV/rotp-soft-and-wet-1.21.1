@@ -50,12 +50,12 @@ public class SoftAndWetBubbleEntity extends ModdedProjectileEntity {
 
     @Override
     public int ticksLifespan() {
-        return 180;
+        return 60;
     }
 
     @Override
     protected float getBaseDamage() {
-        return 4;
+        return 2;
     }
 
     @Override
