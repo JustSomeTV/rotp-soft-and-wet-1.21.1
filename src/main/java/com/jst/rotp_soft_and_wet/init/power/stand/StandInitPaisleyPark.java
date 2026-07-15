@@ -51,8 +51,7 @@ public class StandInitPaisleyPark {
                         .addHumanoidStandSkills()
 
                 , id)
-                .discTooltipExperimental()
-                .init(stand -> stand.discStoryPartPriority = 1);
+                .discTooltipExperimental();
     }
 
 }

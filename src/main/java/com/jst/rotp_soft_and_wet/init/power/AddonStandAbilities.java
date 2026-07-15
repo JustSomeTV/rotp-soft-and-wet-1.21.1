@@ -3,6 +3,8 @@ package com.jst.rotp_soft_and_wet.init.power;
 import static com.github.standobyte.jojo.core.JojoRegistries.ABILITY_TYPES;
 
 import com.github.standobyte.jojo.powersystem.ability.AbilityType;
+import com.jst.rotp_soft_and_wet.jojoimpl.stands.killerqueen8.DeleteSheerHeartAttack;
+import com.jst.rotp_soft_and_wet.jojoimpl.stands.killerqueen8.SummonSheerHeartAttack;
 import com.jst.rotp_soft_and_wet.jojoimpl.stands.softandwet.*;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
@@ -23,4 +25,10 @@ public class AddonStandAbilities {
 
     public static final DeferredHolder<AbilityType<?>,AbilityType<SoftAndWetBubbleMoisture>> BUBBLE_MOISTURE = ABILITY_TYPES.register(
             "bubble_moisture", key -> new AbilityType<>(key, SoftAndWetBubbleMoisture::new));
+
+    public static final DeferredHolder<AbilityType<?>,AbilityType<SummonSheerHeartAttack>> SHEER_HEART_ATTACK_SUMMON = ABILITY_TYPES.register(
+            "sheer_heart_attack_summon", key -> new AbilityType<>(key, SummonSheerHeartAttack::new));
+
+    public static final DeferredHolder<AbilityType<?>,AbilityType<DeleteSheerHeartAttack>> SHEER_HEART_ATTACK_DELETE= ABILITY_TYPES.register(
+            "sheer_heart_attack_delete", key -> new AbilityType<>(key, DeleteSheerHeartAttack::new));
 }

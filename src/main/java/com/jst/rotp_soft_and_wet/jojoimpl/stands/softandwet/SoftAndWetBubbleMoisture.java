@@ -7,7 +7,6 @@ import com.github.standobyte.jojo.powersystem.ability.EntityActionAbility;
 import com.github.standobyte.jojo.powersystem.ability.controls.InputMethod;
 import com.github.standobyte.jojo.powersystem.ability.input.ActionInputBuffer.BufferingState;
 import com.github.standobyte.jojo.powersystem.entityaction.HeldInput;
-import com.jst.rotp_soft_and_wet.core.RipplesOfThePastSoftAndWet;
 import com.jst.rotp_soft_and_wet.entity.SoftAndWetBubbleEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.LivingEntity;

@@ -32,6 +32,9 @@ public class StandInitKillerQueen8 {
 
                         .addHumanoidStandStuff()
 
+                        .addAbility("sha_normal", AddonStandAbilities.SHEER_HEART_ATTACK_SUMMON)
+                        .addAbility("sha_delete", AddonStandAbilities.SHEER_HEART_ATTACK_DELETE)
+
                         .addAbility("punch", ModStandAbilities.PUNCH)
                         .addAbility("punch2", ModStandAbilities.PUNCH)
                         .addAbility("punch3", ModStandAbilities.PUNCH)
@@ -39,6 +42,18 @@ public class StandInitKillerQueen8 {
                         .addAbility("barrage", ModStandAbilities.BARRAGE)
                         .addAbility("heavy_punch", ModStandAbilities.HEAVY_PUNCH)
 
+                        .makeControlScheme("hotbar")
+                        .makeHotbar(0, USE_SPECIAL, SWITCH_SPECIAL)
+
+                        .bind("punch", InputMethod.CLICK, InputKey.LMB)
+                        .bind("barrage", InputMethod.HOLD, InputKey.LMB)
+                        .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
+                        .bind("bubble_shoot", InputMethod.CLICK, InputKey.RMB.withModifier(InputKey.Modifier.CONTROL))
+
+                        .addToHotbar("sha_normal",0, InputMethod.CLICK)
+                        .addToHotbar("sha_delete",0, InputMethod.CLICK)
+
+                        .finalizeControlScheme()
 
                         .makeControlScheme("keybinds")
 

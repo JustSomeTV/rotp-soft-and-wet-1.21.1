@@ -2,7 +2,6 @@ package com.jst.rotp_soft_and_wet.entity.client;
 
 import com.github.standobyte.jojo.client.ClientGlobals;
 import com.jst.rotp_soft_and_wet.core.RipplesOfThePastSoftAndWet;
-import com.jst.rotp_soft_and_wet.entity.SheerHeartAttackEntity;
 import com.jst.rotp_soft_and_wet.entity.SoftAndWetBubbleEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
