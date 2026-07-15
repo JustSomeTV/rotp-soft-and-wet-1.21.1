@@ -1,7 +1,6 @@
 package com.jst.rotp_soft_and_wet.entity;
 
 import com.github.standobyte.jojo.customobjects.entity_projectile.ModdedProjectileEntity;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
@@ -9,6 +8,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
+
+import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class SoftAndWetBubbleEntity extends ModdedProjectileEntity {
     public enum BubbleType {

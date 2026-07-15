@@ -21,8 +21,8 @@ import net.neoforged.neoforge.network.PacketDistributor;
 
 import java.util.function.Consumer;
 
-public class TheWorldHighVoltageType extends EntityStandType {
-    public TheWorldHighVoltageType(StandStats stats, MovesetBuilder moveset, ResourceLocation id) {
+public class AwakingThreeLeavesType extends EntityStandType {
+    public AwakingThreeLeavesType(StandStats stats, MovesetBuilder moveset, ResourceLocation id) {
         super(stats, moveset, id);
     }
 

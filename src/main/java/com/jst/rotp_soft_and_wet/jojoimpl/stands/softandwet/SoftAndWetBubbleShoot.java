@@ -11,6 +11,7 @@ import com.jst.rotp_soft_and_wet.core.RipplesOfThePastSoftAndWet;
 import com.jst.rotp_soft_and_wet.entity.SoftAndWetBubbleEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;

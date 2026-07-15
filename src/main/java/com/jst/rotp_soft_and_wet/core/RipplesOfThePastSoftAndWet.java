@@ -1,6 +1,7 @@
 package com.jst.rotp_soft_and_wet.core;
 
 import com.jst.rotp_soft_and_wet.entity.ModEntities;
+import com.jst.rotp_soft_and_wet.entity.client.SheerHeartAttackRenderer;
 import com.jst.rotp_soft_and_wet.entity.client.SoftAndWetBubbleRenderer;
 import com.jst.rotp_soft_and_wet.init.AddonSoundEvents;
 import com.jst.rotp_soft_and_wet.init.ModBlocks;
@@ -10,6 +11,7 @@ import com.jst.rotp_soft_and_wet.init.power.AddonPlayerPowers;
 import com.jst.rotp_soft_and_wet.init.power.AddonStandAbilities;
 import com.jst.rotp_soft_and_wet.init.power.stand.AddonStands;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
@@ -22,6 +24,8 @@ import org.slf4j.Logger;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+
+import javax.swing.text.html.parser.Entity;
 
 @Mod(RipplesOfThePastSoftAndWet.MOD_ID)
 public class RipplesOfThePastSoftAndWet {
@@ -60,6 +64,7 @@ public class RipplesOfThePastSoftAndWet {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.SOFT_AND_WET_BUBBLE.get(), SoftAndWetBubbleRenderer::new);
+            EntityRenderers.register(ModEntities.SHEER_HEART_ATTACK.get(), SheerHeartAttackRenderer::new);
         }
     }
 }

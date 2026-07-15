@@ -135,6 +135,16 @@
 					]
 				},
 				{
+					"name": "shovel",
+					"parent": "right_arm_bend",
+					"pivot": [-6.5, 18.5, 0],
+					"cubes": [
+						{"origin": [-7.5, 12.5, -8], "size": [2, 2, 11], "uv": [0, 51]},
+						{"origin": [-6.5, 11.5, 3], "size": [0, 4, 3], "uv": [0, 55]},
+						{"origin": [-6.5, 9.5, -16], "size": [0, 8, 9], "uv": [0, 34]}
+					]
+				},
+				{
 					"name": "torso_lower",
 					"parent": "Torso",
 					"pivot": [0, 17, 0],

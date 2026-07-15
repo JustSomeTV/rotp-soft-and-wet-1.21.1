@@ -18,6 +18,10 @@ public class ModEntities {
             ENTITY_TYPES.register("bubble", () -> EntityType.Builder.<SoftAndWetBubbleEntity>of(SoftAndWetBubbleEntity::new, MobCategory.MISC)
                     .sized(0.5F, 0.5F).build("bubble"));
 
+    public static final Supplier<EntityType<SheerHeartAttackEntity>> SHEER_HEART_ATTACK =
+            ENTITY_TYPES.register("sheer_heart_attack", () -> EntityType.Builder.<SheerHeartAttackEntity>of(SheerHeartAttackEntity::new, MobCategory.MONSTER)
+                    .sized(0.75F, 0.75F).build("sheer_heart_attack"));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
