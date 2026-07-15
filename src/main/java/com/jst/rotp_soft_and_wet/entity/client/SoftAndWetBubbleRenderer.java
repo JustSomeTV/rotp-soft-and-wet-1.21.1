@@ -1,6 +1,8 @@
 package com.jst.rotp_soft_and_wet.entity.client;
 
+import com.github.standobyte.jojo.client.ClientGlobals;
 import com.jst.rotp_soft_and_wet.core.RipplesOfThePastSoftAndWet;
+import com.jst.rotp_soft_and_wet.entity.SheerHeartAttackEntity;
 import com.jst.rotp_soft_and_wet.entity.SoftAndWetBubbleEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -26,29 +28,31 @@ public class SoftAndWetBubbleRenderer extends EntityRenderer<SoftAndWetBubbleEnt
     public void render(SoftAndWetBubbleEntity entity, float entityYaw, float partialTicks,
                        PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
 
-        poseStack.pushPose();
+        if (ClientGlobals.canSeeStands) {
+            poseStack.pushPose();
 
-        // position offset
-        poseStack.translate(0.0, -1.0, 0.0);
+            // position offset
+            poseStack.translate(0.0, -1.0, 0.0);
 
-        // rotation (optional but recommended)
-        poseStack.mulPose(com.mojang.math.Axis.YP.rotationDegrees(-entity.getYRot()));
+            // rotation (optional but recommended)
+            poseStack.mulPose(com.mojang.math.Axis.YP.rotationDegrees(-entity.getYRot()));
 
-        // animate (safe even if empty)
-        model.setupAnim(entity, 0, 0, entity.tickCount + partialTicks, 0, 0);
+            // animate (safe even if empty)
+            model.setupAnim(entity, 0, 0, entity.tickCount + partialTicks, 0, 0);
 
-        VertexConsumer vc = buffer.getBuffer(
-                RenderType.entityTranslucent(getTextureLocation(entity))
-        );
+            VertexConsumer vc = buffer.getBuffer(
+                    RenderType.entityTranslucent(getTextureLocation(entity))
+            );
 
-        model.renderToBuffer(
-                poseStack,
-                vc,
-                packedLight,
-                OverlayTexture.NO_OVERLAY
-        );
+            model.renderToBuffer(
+                    poseStack,
+                    vc,
+                    packedLight,
+                    OverlayTexture.NO_OVERLAY
+            );
 
-        poseStack.popPose();
+            poseStack.popPose();
+        }
 
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
     }
@@ -59,5 +63,14 @@ public class SoftAndWetBubbleRenderer extends EntityRenderer<SoftAndWetBubbleEnt
                 RipplesOfThePastSoftAndWet.MOD_ID,
                 "textures/entity/soft_and_wet_bubble.png"
         );
+    }
+
+    @Override
+    protected boolean shouldShowName(SoftAndWetBubbleEntity entity) {
+        if (!ClientGlobals.canSeeStands) {
+            return false;
+        }
+
+        return super.shouldShowName(entity);
     }
 }
