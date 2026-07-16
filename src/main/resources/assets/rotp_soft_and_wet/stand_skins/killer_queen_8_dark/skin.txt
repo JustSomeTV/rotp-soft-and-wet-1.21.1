@@ -1,0 +1,6 @@
+{
+  "stand_type": "rotp_soft_and_wet:killer_queen_8",
+  "color" : "#ff0000",
+  "story_part": "jojo_ripples:p8",
+  "scale": [ 0.65, 1.95 ]
+}
