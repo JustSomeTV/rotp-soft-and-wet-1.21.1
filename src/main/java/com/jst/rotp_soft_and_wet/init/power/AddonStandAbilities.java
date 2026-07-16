@@ -4,6 +4,8 @@ import static com.github.standobyte.jojo.core.JojoRegistries.ABILITY_TYPES;
 
 import com.github.standobyte.jojo.powersystem.ability.AbilityType;
 import com.jst.rotp_soft_and_wet.jojoimpl.stands.killerqueen8.DeleteSheerHeartAttack;
+import com.jst.rotp_soft_and_wet.jojoimpl.stands.killerqueen8.DetonateBombAbility;
+import com.jst.rotp_soft_and_wet.jojoimpl.stands.killerqueen8.MarkBombAbility;
 import com.jst.rotp_soft_and_wet.jojoimpl.stands.killerqueen8.SummonSheerHeartAttack;
 import com.jst.rotp_soft_and_wet.jojoimpl.stands.softandwet.*;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -31,4 +33,10 @@ public class AddonStandAbilities {
 
     public static final DeferredHolder<AbilityType<?>,AbilityType<DeleteSheerHeartAttack>> SHEER_HEART_ATTACK_DELETE= ABILITY_TYPES.register(
             "sheer_heart_attack_delete", key -> new AbilityType<>(key, DeleteSheerHeartAttack::new));
+
+    public static final DeferredHolder<AbilityType<?>,AbilityType<MarkBombAbility>> BOMB_MARKER = ABILITY_TYPES.register(
+            "mark_bomb", key -> new AbilityType<>(key, MarkBombAbility::new));
+
+    public static final DeferredHolder<AbilityType<?>,AbilityType<DetonateBombAbility>> BOMB_DETONATE = ABILITY_TYPES.register(
+            "detonate_bomb", key -> new AbilityType<>(key, DetonateBombAbility::new));
 }

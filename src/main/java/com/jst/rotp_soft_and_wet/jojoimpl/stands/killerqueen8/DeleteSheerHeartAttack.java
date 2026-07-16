@@ -22,11 +22,12 @@ public class DeleteSheerHeartAttack extends EntityActionAbility {
     @Override
     public HeldInput onKeyPress(Level level, LivingEntity user, FriendlyByteBuf extraClientInput, InputMethod inputMethod, float clickHoldResolveTime, ActionInputBuffer.BufferingState bufferingState) {
         if (!level.isClientSide) if (user instanceof Player player) {
-            level.getEntitiesOfClass(
-                    SheerHeartAttackEntity.class,
-                    player.getBoundingBox().inflate(512),
-                    entity -> player.getUUID().equals(entity.getUUID())
-            ).forEach(Entity::discard);
+            for (SheerHeartAttackEntity entity : level.getEntitiesOfClass(SheerHeartAttackEntity.class, player.getBoundingBox().inflate(512)
+            )) {
+                if (player.getUUID().equals(entity.getOwnerUUID())) {
+                    entity.discard();
+                }
+            }
         }
         return  null;
     }

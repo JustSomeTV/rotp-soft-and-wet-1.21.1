@@ -21,11 +21,11 @@ public class StandInitKillerQueen8 {
     public static KillerQueen8Type create(ResourceLocation id) {
         return new KillerQueen8Type(
                 new StandStats.Builder()
-                        .power(10)
+                        .power(15)
                         .speed(12)
                         .range(2, 8)
-                        .durability(11)
-                        .precision(10)
+                        .durability(12)
+                        .precision(12)
                         .build(),
 
                 new MovesetBuilder()
@@ -34,6 +34,8 @@ public class StandInitKillerQueen8 {
 
                         .addAbility("sha_normal", AddonStandAbilities.SHEER_HEART_ATTACK_SUMMON)
                         .addAbility("sha_delete", AddonStandAbilities.SHEER_HEART_ATTACK_DELETE)
+                        .addAbility("mark_bomb", AddonStandAbilities.BOMB_MARKER)
+                        .addAbility("detonate_bomb", AddonStandAbilities.BOMB_DETONATE)
 
                         .addAbility("punch", ModStandAbilities.PUNCH)
                         .addAbility("punch2", ModStandAbilities.PUNCH)
@@ -48,10 +50,11 @@ public class StandInitKillerQueen8 {
                         .bind("punch", InputMethod.CLICK, InputKey.LMB)
                         .bind("barrage", InputMethod.HOLD, InputKey.LMB)
                         .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
-                        .bind("bubble_shoot", InputMethod.CLICK, InputKey.RMB.withModifier(InputKey.Modifier.CONTROL))
 
                         .addToHotbar("sha_normal",0, InputMethod.CLICK)
                         .addToHotbar("sha_delete",0, InputMethod.CLICK)
+                        .addToHotbar("mark_bomb",0, InputMethod.CLICK)
+                        .addToHotbar("detonate_bomb",0, InputMethod.CLICK)
 
                         .finalizeControlScheme()
 

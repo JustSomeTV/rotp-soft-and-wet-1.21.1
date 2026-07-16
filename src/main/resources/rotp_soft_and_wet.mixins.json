@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.jst.rotp_soft_and_wet.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "PlayerMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

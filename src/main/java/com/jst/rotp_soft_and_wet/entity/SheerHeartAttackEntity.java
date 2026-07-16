@@ -48,17 +48,18 @@ public class SheerHeartAttackEntity extends Monster{
     }
 
     @Nullable
-    public LivingEntity getOwner(){
+    public LivingEntity getOwner() {
         UUID uuid = getOwnerUUID();
 
-        if (uuid == null){
+        if (uuid == null) {
             return null;
         }
 
-        if (!(level() instanceof ServerLevel server))
+        if (!(level() instanceof ServerLevel server)) {
             return null;
+        }
 
-        Entity entity = server.getEntity(uuid);
+        Entity entity = server.getPlayerByUUID(uuid);
 
         return entity instanceof LivingEntity living
                 ? living
