@@ -55,11 +55,7 @@ public class SheerHeartAttackEntity extends Monster{
             return null;
         }
 
-        if (!(level() instanceof ServerLevel server)) {
-            return null;
-        }
-
-        Entity entity = server.getPlayerByUUID(uuid);
+        Entity entity = level().getPlayerByUUID(uuid);
 
         return entity instanceof LivingEntity living
                 ? living

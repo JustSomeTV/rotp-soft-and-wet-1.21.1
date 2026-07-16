@@ -49,7 +49,11 @@ public class StandInitKillerQueen8 {
 
                         .bind("punch", InputMethod.CLICK, InputKey.LMB)
                         .bind("barrage", InputMethod.HOLD, InputKey.LMB)
-                        .bind("heavy_punch", InputMethod.CLICK, InputKey.RMB)
+                        .bind("heavy_punch", InputMethod.CLICK, InputKey.LMB.withModifier(InputKey.Modifier.CONTROL))
+                        .bind("mark_bomb",InputMethod.CLICK, InputKey.RMB)
+                        .bind("detonate_bomb", InputMethod.CLICK, InputKey.RMB.withModifier(InputKey.Modifier.CONTROL))
+                        .bind("sha_normal",InputMethod.HOLD, InputKey.RMB)
+                        .bind("sha_delete", InputMethod.HOLD, InputKey.RMB.withModifier(InputKey.Modifier.CONTROL))
 
                         .addToHotbar("sha_normal",0, InputMethod.CLICK)
                         .addToHotbar("sha_delete",0, InputMethod.CLICK)

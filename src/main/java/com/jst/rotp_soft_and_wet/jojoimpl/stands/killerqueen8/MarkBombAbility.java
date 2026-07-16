@@ -65,7 +65,7 @@ public class MarkBombAbility extends EntityActionAbility {
     }
 
     private LivingEntity getLookedAtEntity(Player player) {
-        double range = 8.0;
+        double range = 2.0;
 
         Vec3 eyePos = player.getEyePosition();
         Vec3 lookVec = player.getLookAngle();
@@ -87,7 +87,7 @@ public class MarkBombAbility extends EntityActionAbility {
     }
 
     private BlockHitResult getLookedAtBlock(Player player) {
-        double range = 8.0;
+        double range = 2.0;
 
         Vec3 eyePos = player.getEyePosition();
         Vec3 lookVec = player.getLookAngle();
