@@ -7,6 +7,7 @@ import com.github.standobyte.jojo.powersystem.ability.EntityActionAbility;
 import com.github.standobyte.jojo.powersystem.ability.controls.InputMethod;
 import com.github.standobyte.jojo.powersystem.ability.input.ActionInputBuffer.BufferingState;
 import com.github.standobyte.jojo.powersystem.entityaction.HeldInput;
+import com.github.standobyte.jojo.powersystem.standpower.StandPower;
 import com.jst.rotp_soft_and_wet.entity.SoftAndWetBubbleEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.LivingEntity;
@@ -26,6 +27,7 @@ public class SoftAndWetBubbleBarrage extends EntityActionAbility {
     @Override
     public HeldInput onKeyPress(Level level, LivingEntity user, FriendlyByteBuf extraClientInput, InputMethod inputMethod, float clickHoldResolveTime, BufferingState bufferingState) {
         if (!level.isClientSide) if (user instanceof Player player) {
+        	StandPower standPower = StandPower.get(user);
             //Launch Projectile
             for(int i = 0; i < 10; ++i) {
                 SoftAndWetBubbleEntity bubbleProjectile = new SoftAndWetBubbleEntity(level, player);
@@ -37,6 +39,7 @@ public class SoftAndWetBubbleBarrage extends EntityActionAbility {
                         look.z + level.random.nextGaussian() * 0.08,
                         0.5F,
                         0.0F);
+                bubbleProjectile.setStandSkinIdFrom(standPower);
                 level.addFreshEntity(bubbleProjectile);
             }
         }

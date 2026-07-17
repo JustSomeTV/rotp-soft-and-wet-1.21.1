@@ -21,7 +21,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.common.NeoForge;
 import org.slf4j.Logger;
 
 import net.neoforged.bus.api.IEventBus;
@@ -69,7 +68,9 @@ public class RipplesOfThePastSoftAndWet {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(ModEntities.SOFT_AND_WET_BUBBLE.get(), SoftAndWetBubbleRenderer::new);
+            EntityRenderers.register(ModEntities.SOFT_AND_WET_BUBBLE.get(), ctx -> new SoftAndWetBubbleRenderer(ctx)
+    				.initTexture(RipplesOfThePastSoftAndWet.resLoc("textures/entity/soft_and_wet_bubble.png"), true)
+    				.setDefaultSkinId(RipplesOfThePastSoftAndWet.resLoc("soft_and_wet")));
             EntityRenderers.register(ModEntities.SHEER_HEART_ATTACK.get(), ctx -> new SheerHeartAttackRenderer(ctx)
     				.initTexture(RipplesOfThePastSoftAndWet.resLoc("textures/entity/sheer_heart_attack.png"), true)
     				.initResourceModel(RipplesOfThePastSoftAndWet.resLoc("sheer_heart_attack"), SheerHeartAttackModel::new, true)
