@@ -16,13 +16,18 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.UUID;
 
-public class SheerHeartAttackEntity extends Monster{
+public class SheerHeartAttackEntity extends Monster implements GeoEntity {
     private final float explosionRadius = 3.0F;
+    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public SheerHeartAttackEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
@@ -116,5 +121,15 @@ public class SheerHeartAttackEntity extends Monster{
                 .add(Attributes.ARMOR_TOUGHNESS, 255d)
                 .add(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, 255d)
                 .add(Attributes.ATTACK_DAMAGE, 0D);
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return cache;
     }
 }
