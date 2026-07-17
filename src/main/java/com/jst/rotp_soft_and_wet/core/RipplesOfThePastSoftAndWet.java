@@ -2,6 +2,7 @@ package com.jst.rotp_soft_and_wet.core;
 
 import com.jst.rotp_soft_and_wet.data.ModAttachments;
 import com.jst.rotp_soft_and_wet.entity.ModEntities;
+import com.jst.rotp_soft_and_wet.entity.client.SheerHeartAttackModel;
 import com.jst.rotp_soft_and_wet.entity.client.SheerHeartAttackRenderer;
 import com.jst.rotp_soft_and_wet.entity.client.SoftAndWetBubbleRenderer;
 import com.jst.rotp_soft_and_wet.init.AddonSoundEvents;
@@ -69,7 +70,10 @@ public class RipplesOfThePastSoftAndWet {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.SOFT_AND_WET_BUBBLE.get(), SoftAndWetBubbleRenderer::new);
-            EntityRenderers.register(ModEntities.SHEER_HEART_ATTACK.get(), SheerHeartAttackRenderer::new);
+            EntityRenderers.register(ModEntities.SHEER_HEART_ATTACK.get(), ctx -> new SheerHeartAttackRenderer(ctx)
+    				.initTexture(RipplesOfThePastSoftAndWet.resLoc("textures/entity/sheer_heart_attack.png"), true)
+    				.initResourceModel(RipplesOfThePastSoftAndWet.resLoc("sheer_heart_attack"), SheerHeartAttackModel::new, true)
+    				.setDefaultSkinId(RipplesOfThePastSoftAndWet.resLoc("killer_queen_8")));
         }
     }
 }

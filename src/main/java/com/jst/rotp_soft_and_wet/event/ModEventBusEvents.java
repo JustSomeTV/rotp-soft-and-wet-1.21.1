@@ -3,7 +3,6 @@ package com.jst.rotp_soft_and_wet.event;
 import com.jst.rotp_soft_and_wet.core.RipplesOfThePastSoftAndWet;
 import com.jst.rotp_soft_and_wet.entity.ModEntities;
 import com.jst.rotp_soft_and_wet.entity.SheerHeartAttackEntity;
-import com.jst.rotp_soft_and_wet.entity.client.SheerHeartAttackGeoModel;
 import com.jst.rotp_soft_and_wet.entity.client.SoftAndWetBubbleModel;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

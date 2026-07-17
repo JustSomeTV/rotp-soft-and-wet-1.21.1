@@ -6,6 +6,7 @@ import com.github.standobyte.jojo.powersystem.ability.EntityActionAbility;
 import com.github.standobyte.jojo.powersystem.ability.controls.InputMethod;
 import com.github.standobyte.jojo.powersystem.ability.input.ActionInputBuffer;
 import com.github.standobyte.jojo.powersystem.entityaction.HeldInput;
+import com.github.standobyte.jojo.powersystem.standpower.StandPower;
 import com.jst.rotp_soft_and_wet.entity.ModEntities;
 import com.jst.rotp_soft_and_wet.entity.SheerHeartAttackEntity;
 import net.minecraft.network.FriendlyByteBuf;
@@ -22,6 +23,7 @@ public class SummonSheerHeartAttack extends EntityActionAbility {
     @Override
     public HeldInput onKeyPress(Level level, LivingEntity user, FriendlyByteBuf extraClientInput, InputMethod inputMethod, float clickHoldResolveTime, ActionInputBuffer.BufferingState bufferingState) {
         if (!level.isClientSide) if (user instanceof Player player) {
+        	StandPower userPower = StandPower.get(user);
 
             boolean alreadyExists = level.getEntitiesOfClass(
                     SheerHeartAttackEntity.class,
@@ -37,6 +39,7 @@ public class SummonSheerHeartAttack extends EntityActionAbility {
                     ModEntities.SHEER_HEART_ATTACK.get(), level
             );
 
+            entity.setStandSkinIdFrom(userPower);
             entity.setOwnerUUID(player.getUUID());
             entity.moveTo(player.getX(), player.getY(), player.getZ());
 
