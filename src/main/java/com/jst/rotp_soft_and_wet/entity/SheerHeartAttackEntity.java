@@ -1,7 +1,11 @@
 package com.jst.rotp_soft_and_wet.entity;
 
+import com.github.standobyte.jojo.customobjects.EntityWithStandSkin;
+import com.github.standobyte.jojo.util.functions.NBTUtil;
+import com.github.standobyte.jojo.util.functions_network.NetworkUtil;
 import com.jst.rotp_soft_and_wet.entity.goals.InstantExplodeGoal;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -16,18 +20,14 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import software.bernie.geckolib.animatable.GeoEntity;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.util.GeckoLibUtil;
+import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
 
 import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.UUID;
 
-public class SheerHeartAttackEntity extends Monster implements GeoEntity {
+public class SheerHeartAttackEntity extends Monster implements EntityWithStandSkin, IEntityWithComplexSpawn {
     private final float explosionRadius = 3.0F;
-    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public SheerHeartAttackEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
@@ -67,6 +67,19 @@ public class SheerHeartAttackEntity extends Monster implements GeoEntity {
                 : null;
     }
 
+
+    private StandSkinPath skin;
+	@Override
+	public StandSkinPath getStandSkinId() {
+		return skin;
+	}
+
+	@Override
+	public void setStandSkinId(StandSkinPath skin) {
+		this.skin = skin;
+	}
+
+
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
@@ -76,6 +89,8 @@ public class SheerHeartAttackEntity extends Monster implements GeoEntity {
         if (owner != null){
             tag.putUUID("Owner", owner);
         }
+
+        skin = NBTUtil.getOptional(tag, "StandSkin", StandSkinPath.CODEC).orElse(null);
     }
 
     @Override
@@ -85,6 +100,8 @@ public class SheerHeartAttackEntity extends Monster implements GeoEntity {
         if (tag.hasUUID("Owner")){
             entityData.set(OWNER_UUID, Optional.of(tag.getUUID("Owner")));
         }
+
+        NBTUtil.put(tag, "StandSkin", skin, StandSkinPath.CODEC);
     }
 
     @Override
@@ -123,13 +140,14 @@ public class SheerHeartAttackEntity extends Monster implements GeoEntity {
                 .add(Attributes.ATTACK_DAMAGE, 0D);
     }
 
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 
-    }
+	@Override
+	public void writeSpawnData(RegistryFriendlyByteBuf buffer) {
+		NetworkUtil.writeOptionally(skin, buffer, StandSkinPath.STREAM_CODEC);
+	}
 
-    @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return cache;
-    }
+	@Override
+	public void readSpawnData(RegistryFriendlyByteBuf additionalData) {
+		this.skin = NetworkUtil.readOptional(additionalData, StandSkinPath.STREAM_CODEC).orElse(null);
+	}
 }

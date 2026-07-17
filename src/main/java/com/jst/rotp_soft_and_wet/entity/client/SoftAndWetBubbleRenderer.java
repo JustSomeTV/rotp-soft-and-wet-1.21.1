@@ -1,18 +1,16 @@
 package com.jst.rotp_soft_and_wet.entity.client;
 
 import com.github.standobyte.jojo.client.ClientGlobals;
-import com.jst.rotp_soft_and_wet.core.RipplesOfThePastSoftAndWet;
+import com.github.standobyte.jojo.client.entityrender.entities.SimpleEntityRenderer;
 import com.jst.rotp_soft_and_wet.entity.SoftAndWetBubbleEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.ResourceLocation;
 
-public class SoftAndWetBubbleRenderer extends EntityRenderer<SoftAndWetBubbleEntity> {
+public class SoftAndWetBubbleRenderer extends SimpleEntityRenderer<SoftAndWetBubbleEntity, SoftAndWetBubbleModel> {
 
     private final SoftAndWetBubbleModel model;
 
@@ -54,14 +52,6 @@ public class SoftAndWetBubbleRenderer extends EntityRenderer<SoftAndWetBubbleEnt
         }
 
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
-    }
-
-    @Override
-    public ResourceLocation getTextureLocation(SoftAndWetBubbleEntity entity) {
-        return ResourceLocation.fromNamespaceAndPath(
-                RipplesOfThePastSoftAndWet.MOD_ID,
-                "textures/entity/soft_and_wet_bubble.png"
-        );
     }
 
     @Override

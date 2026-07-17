@@ -73,7 +73,7 @@ public class StandInitSoftAndWet {
                         .addSkill(StandUnlockableSkill.startingAbility("punch"))
                         .addSkill(StandUnlockableSkill.startingAbility("barrage"))
                         .addSkill(StandUnlockableSkill.startingAbility("heavy_punch"))
-                        .addSkill(StandUnlockableSkill.startingAbility("heavy_charged").prerequisiteSkill("heavy_punch"))
+                        //.addSkill(StandUnlockableSkill.startingAbility("heavy_charged").prerequisiteSkill("heavy_punch"))
                         .addSkill(StandUnlockableSkill.startingAbility("bubble_shoot"))
                         .addSkill(StandUnlockableSkill.unlockableAbility("bubble_barrage", 175).prerequisiteSkill("bubble_shoot"))
                         .addSkill(StandUnlockableSkill.unlockableAbility("bubble_blinding", 350).prerequisiteSkill("bubble_friction"))
