@@ -11,17 +11,17 @@ import com.github.standobyte.jojo.powersystem.standpower.entity.EntityStandType;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.ApiStatus;
 
-public class StandInitPaisleyPark {
+public class StandInitSpeedKing {
 
     @ApiStatus.Internal
     public static EntityStandType create(ResourceLocation id) {
         return new EntityStandType(
                 new StandStats.Builder()
-                        .power(0)
-                        .speed(0)
-                        .range(15, 100)
-                        .durability(17)
-                        .precision(7)
+                        .power(10)
+                        .speed(12)
+                        .range(3, 7)
+                        .durability(13)
+                        .precision(10)
                         .build(),
 
                 new MovesetBuilder()
@@ -50,7 +50,7 @@ public class StandInitPaisleyPark {
                         .addHumanoidStandSkills()
 
                 , id)
-                .discTooltipExperimental();
+                .discTooltipWIP();
     }
 
 }

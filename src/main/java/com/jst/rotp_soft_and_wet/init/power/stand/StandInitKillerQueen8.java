@@ -9,17 +9,16 @@ import com.github.standobyte.jojo.powersystem.ability.controls.InputKey;
 import com.github.standobyte.jojo.powersystem.ability.controls.InputMethod;
 import com.github.standobyte.jojo.powersystem.standpower.StandStats;
 import com.github.standobyte.jojo.powersystem.standpower.StandUnlockableSkill;
+import com.github.standobyte.jojo.powersystem.standpower.entity.EntityStandType;
 import com.jst.rotp_soft_and_wet.init.power.AddonStandAbilities;
-import com.jst.rotp_soft_and_wet.powersystem.standpower.type.KillerQueen8Type;
-import com.jst.rotp_soft_and_wet.powersystem.standpower.type.SoftAndWetType;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.ApiStatus;
 
 public class StandInitKillerQueen8 {
 
     @ApiStatus.Internal
-    public static KillerQueen8Type create(ResourceLocation id) {
-        return new KillerQueen8Type(
+    public static EntityStandType create(ResourceLocation id) {
+        return new EntityStandType(
                 new StandStats.Builder()
                         .power(15)
                         .speed(12)
