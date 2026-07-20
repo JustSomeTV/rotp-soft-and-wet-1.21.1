@@ -8,24 +8,20 @@ import com.github.standobyte.jojo.powersystem.ability.controls.InputMethod;
 import com.github.standobyte.jojo.powersystem.standpower.StandStats;
 import com.github.standobyte.jojo.powersystem.standpower.StandUnlockableSkill;
 import com.github.standobyte.jojo.powersystem.standpower.entity.EntityStandType;
-import com.jst.rotp_soft_and_wet.init.power.AddonStandAbilities;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.ApiStatus;
 
-import static com.github.standobyte.jojo.init.power.ModStands.SWITCH_SPECIAL;
-import static com.github.standobyte.jojo.init.power.ModStands.USE_SPECIAL;
-
-public class StandInitSpeedKing {
+public class StandInitDoobieWah {
 
     @ApiStatus.Internal
     public static EntityStandType create(ResourceLocation id) {
         return new EntityStandType(
                 new StandStats.Builder()
-                        .power(10)
-                        .speed(12)
-                        .range(3, 7)
-                        .durability(13)
-                        .precision(10)
+                        .power(0)
+                        .speed(0)
+                        .range(15, 100)
+                        .durability(17)
+                        .precision(7)
                         .build(),
 
                 new MovesetBuilder()
@@ -36,15 +32,10 @@ public class StandInitSpeedKing {
                         .addAbility("punch2", ModStandAbilities.PUNCH)
                         .addAbility("punch3", ModStandAbilities.PUNCH)
                         .addAbility("punch4", ModStandAbilities.PUNCH)
-                        .addAbility("heat_mark", AddonStandAbilities.BOMB_MARKER)
 
                         .makeControlScheme("hotbar")
-                        .makeHotbar(0, USE_SPECIAL, SWITCH_SPECIAL)
 
                         .bind("punch", InputMethod.CLICK, InputKey.LMB)
-                        .bind("heat_mark", InputMethod.CLICK, InputKey.RMB)
-
-                        .addToHotbar("heat_mark",0, InputMethod.CLICK)
 
                         .finalizeControlScheme()
 
@@ -59,7 +50,7 @@ public class StandInitSpeedKing {
                         .addHumanoidStandSkills()
 
                 , id)
-                .discTooltipWIP();
+                .discTooltipExperimental();
     }
 
 }

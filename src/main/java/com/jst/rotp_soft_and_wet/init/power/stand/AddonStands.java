@@ -20,8 +20,12 @@ public class AddonStands {
 
     public static final DeferredHolder<StandType, EntityStandType> SPEED_KING = STANDS.register("speed_king", StandInitSpeedKing::create);
 
+    public static final DeferredHolder<StandType, EntityStandType> DOOBIE_WAH = STANDS.register("doobie_wah", StandInitDoobieWah::create);
+
     static{
         ModStands.PLAYER_CAN_GET_FROM_ARROW.add(SOFT_AND_WET);
         ModStands.PLAYER_CAN_GET_FROM_ARROW.add(KILLER_QUEEN_8);
+        ModStands.PLAYER_CAN_GET_FROM_ARROW.add(SPEED_KING);
+        ModStands.PLAYER_CAN_GET_FROM_ARROW.add(DOOBIE_WAH);
     }
 }

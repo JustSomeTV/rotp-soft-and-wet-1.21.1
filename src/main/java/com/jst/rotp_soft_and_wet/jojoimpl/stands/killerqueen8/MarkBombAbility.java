@@ -42,16 +42,20 @@ public class MarkBombAbility extends EntityActionAbility {
                 double blockDistance = player.getEyePosition().distanceToSqr(block.getLocation());
 
                 if (entityDistance < blockDistance) {
+                    data.clearMarks();
                     data.markEntity(entity);
                 } else {
+                    data.clearMarks();
                     data.markBlock(block.getBlockPos());
                 }
             }
             else if (entity != null) {
+                data.clearMarks();
                 data.markEntity(entity);
             }
 
             else if (block != null) {
+                data.clearMarks();
                 data.markBlock(block.getBlockPos());
             }
 
@@ -65,7 +69,7 @@ public class MarkBombAbility extends EntityActionAbility {
     }
 
     private LivingEntity getLookedAtEntity(Player player) {
-        double range = 2.0;
+        double range = 5.0;
 
         Vec3 eyePos = player.getEyePosition();
         Vec3 lookVec = player.getLookAngle();
@@ -73,7 +77,7 @@ public class MarkBombAbility extends EntityActionAbility {
 
         AABB searchbox = player.getBoundingBox()
                 .expandTowards(lookVec.scale(range))
-                .inflate(1.0);
+                .inflate(5.0);
 
         EntityHitResult hitResult = ProjectileUtil.getEntityHitResult(
                 player.level(),player,eyePos,endPos,searchbox,entity -> entity instanceof LivingEntity && entity != player
@@ -87,7 +91,7 @@ public class MarkBombAbility extends EntityActionAbility {
     }
 
     private BlockHitResult getLookedAtBlock(Player player) {
-        double range = 2.0;
+        double range = 5.0;
 
         Vec3 eyePos = player.getEyePosition();
         Vec3 lookVec = player.getLookAngle();

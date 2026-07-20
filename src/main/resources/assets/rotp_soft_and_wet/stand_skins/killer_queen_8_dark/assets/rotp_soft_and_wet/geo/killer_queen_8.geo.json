@@ -36,13 +36,13 @@
 					"pivot": [0, 18, 0]
 				},
 				{
-					"name": "head",
+					"name": "head_xrot",
 					"parent": "torso_bend",
 					"pivot": [0, 24, 0]
 				},
 				{
-					"name": "head_xrot",
-					"parent": "head",
+					"name": "head",
+					"parent": "head_xrot",
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0]},

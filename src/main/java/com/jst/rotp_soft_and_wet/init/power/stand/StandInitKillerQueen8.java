@@ -73,12 +73,15 @@ public class StandInitKillerQueen8 {
                         .addSkill(StandUnlockableSkill.startingAbility("barrage"))
                         .addSkill(StandUnlockableSkill.startingAbility("heavy_punch"))
                         .addSkill(StandUnlockableSkill.startingAbility("heavy_charged").prerequisiteSkill("heavy_punch"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("mark_bomb", 200))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("detonate_bomb", 0).prerequisiteSkill("mark_bomb"))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("sha_normal", 325))
+                        .addSkill(StandUnlockableSkill.unlockableAbility("sha_delete", 0).prerequisiteSkill("sha_normal"))
 
                         .addHumanoidStandSkills()
 
                 , id)
-                .discTooltipWIP()
-                .init(stand -> stand.discStoryPartPriority = 1);
+                .discTooltipWIP();
     }
 
 }
